@@ -18,6 +18,7 @@ module.exports = {
         ],
         'no-unused-vars': [0],
         'no-prototype-builtins': [0],
+        'no-empty': [0],
         'linebreak-style': [
             'error',
             'unix'
