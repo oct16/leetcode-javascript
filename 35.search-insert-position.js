@@ -11,13 +11,17 @@
  * @return {number}
  */
 var searchInsert = function(nums, target) {
-    function searchSibling(arr, target) {
+    function searchSibling(arr, { low, high }, target) {
         if (target <= arr[0]) {
-            return nums.indexOf(arr[0])
+            return low
         }
 
         if (target > arr[arr.length - 1]) {
-            return nums.indexOf(arr[arr.length - 1]) + 1
+            return high + 1
+        }
+
+        if (target === arr[arr.length - 1]) {
+            return high
         }
 
         if (target === arr[arr.length - 1]) {
@@ -26,13 +30,14 @@ var searchInsert = function(nums, target) {
 
         let pivot = Math.floor(arr.length / 2)
 
-        if (target <= arr[pivot]) {
-            return searchSibling(arr.slice(0, pivot), target)
+        if (target < arr[pivot]) {
+            const _nums = arr.slice(0, pivot)
+            return searchSibling(_nums, { low, high: low + _nums.length - 1 }, target)
         }
-        return searchSibling(arr.slice(pivot), target)
+        const _nums = arr.slice(pivot)
+        return searchSibling(_nums, { low: high - _nums.length + 1, high }, target)
     }
 
-    return searchSibling(nums, target)
+    return searchSibling(nums, { low: 0, high: nums.length - 1 }, target)
 }
 // @lc code=end
-
