@@ -1,23 +1,27 @@
 {
-  "name": "leetcode-javascript",
-  "version": "1.0.0",
-  "description": "",
-  "main": "1.two-sum.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/oct16/leetcode-javascript.git"
-  },
-  "keywords": [
-    "leetcode",
-    "javascript"
-  ],
-  "author": "oct16",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/oct16/leetcode-javascript/issues"
-  },
-  "homepage": "https://github.com/oct16/leetcode-javascript#readme"
+    "name": "leetcode-javascript",
+    "version": "1.0.0",
+    "description": "",
+    "main": "1.two-sum.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/oct16/leetcode-javascript.git"
+    },
+    "keywords": [
+        "leetcode",
+        "javascript"
+    ],
+    "author": "oct16",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/oct16/leetcode-javascript/issues"
+    },
+    "homepage": "https://github.com/oct16/leetcode-javascript#readme",
+    "devDependencies": {
+        "@babel/core": "^7.7.7",
+        "@babel/preset-env": "^7.7.7"
+    }
 }
