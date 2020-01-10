@@ -49,8 +49,9 @@ D      (D)
 
 > 类型求最大面积, x坐标=索引距离, y坐标=两根柱子最小值, 从两边向内收缩即可
 
-[12: Integer to Roman 🎃[Medium]]
+[12: Integer to Roman 🎃[Medium]](https://leetcode.com/problems/integer-to-roman/) [🙈](12.integer-to-roman.js)
 
+> 主要处理1459四个特殊数字，持续累加，参考[代码](12.integer-to-roman.js)
 
 [13: Roman to Integer 🍀[Easy]](https://leetcode.com/problems/roman-to-integer/) [🙈](13.roman-to-integer.js) 
 
@@ -77,14 +78,15 @@ D      (D)
 > 比[3Sum](https://leetcode.com/problems/3sum/)再多一层遍历
 
 
-[19: Remove Nth Node From End of List 🎃[Medium]]
+[19: Remove Nth Node From End of List 🎃[Medium]](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) [answer](19.remove-nth-node-from-end-of-list.js)
 
+> 保存一个referenceArray的引用, 遍历完成后找到目标，通过prev.next = prev.next.next即可删除
 
 [20: Valid Parentheses 🍀[Easy]](https://leetcode.com/problems/valid-parentheses/) [🙈](20.valid-parentheses.js)
 
 > {[()]}是对称性的, 所以两两之后等于5, 声明一个数组, 遍历时如果和为5就pop, 否则push
 
-[21: Merge Two Sorted Lists 🍀[Easy]](https://leetcode.com/problems/merge-two-sorted-lists/) [answer](21.merge-two-sorted-lists.js)
+[21: Merge Two Sorted Lists 🍀[Easy]](https://leetcode.com/problems/merge-two-sorted-lists/) [🙈](21.merge-two-sorted-lists.js)
 
 > 先拆开转成两个数组, 再sort后拼装就可以了
 
@@ -100,19 +102,19 @@ D      (D)
 [25: Reverse Nodes in k-Group 🍉[Hard]]
 
 
-[26: Remove Duplicates from Sorted Array 🍀[Easy]](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)  [answer](26.remove-duplicates-from-sorted-array.js)
+[26: Remove Duplicates from Sorted Array 🍀[Easy]](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)  [🙈](26.remove-duplicates-from-sorted-array.js)
 
 > 遍历时用当前值和前一个值对比, 如果不相等, 用当前值替换掉前一个值, ++计数器, 结果等于nums.length - 计数器
 
-[27: Remove Element 🍀[Easy]](https://leetcode.com/problems/remove-element/) [answer](27.remove-element.js)
+[27: Remove Element 🍀[Easy]](https://leetcode.com/problems/remove-element/) [🙈](27.remove-element.js)
 
 > 类似dom操作removeChild方法, 对数组操作用splice(i, 1)删除即可
 
-[28: Implement strStr 🍀[Easy]](https://leetcode.com/problems/implement-strstr/) [answer](28.implement-str-str.js)
+[28: Implement strStr 🍀[Easy]](https://leetcode.com/problems/implement-strstr/) [🙈](28.implement-str-str.js)
 
 > 返回indexOf
 
-[29: Divide Two Integers 🎃[Medium]](https://leetcode.com/problems/divide-two-integers/) [answer](29.divide-two-integers.js)
+[29: Divide Two Integers 🎃[Medium]](https://leetcode.com/problems/divide-two-integers/) [🙈](29.divide-two-integers.js)
 
 > 不能用乘除摩来实现除的方法, 所以用二分查找和 >> << 位运算实现
 
@@ -131,7 +133,7 @@ D      (D)
 [34: Find First and Last Position of Element in Sorted Array 🎃[Medium]]
 
 
-[35: Search Insert Position 🍀[Easy]](https://leetcode.com/problems/search-insert-position/) [answer](35.search-insert-position.js) 
+[35: Search Insert Position 🍀[Easy]](https://leetcode.com/problems/search-insert-position/) [🙈](35.search-insert-position.js) 
 
 > 用二分查找找到目标, low <= target <= high
 
@@ -194,7 +196,7 @@ D      (D)
 [52: N-Queens II 🍉[Hard]]
 
 
-[53: Maximum Subarray 🍀[Easy]](https://leetcode.com/problems/maximum-subarray/) [answer](53.maximum-subarray.js)
+[53: Maximum Subarray 🍀[Easy]](https://leetcode.com/problems/maximum-subarray/) [🙈](53.maximum-subarray.js)
 
 > 遍历比较i和i-1的大小, 用最大值替换i, 记录最大的max值
 
@@ -210,7 +212,7 @@ D      (D)
 [57: Insert Interval 🍉[Hard]]
 
 
-[58: Length of Last Word 🍀[Easy]](https://leetcode.com/problems/length-of-last-word/) [answer](58.length-of-last-word.js)
+[58: Length of Last Word 🍀[Easy]](https://leetcode.com/problems/length-of-last-word/) [🙈](58.length-of-last-word.js)
 
 > 用正则效率太低, 另一个办法是逆序遍历, 当不为空的时候累加长度, 再遇到空格退出
 
@@ -235,22 +237,22 @@ D      (D)
 [65: Valid Number 🍉[Hard]]
 
 
-[66: Plus One 🍀[Easy]](https://leetcode.com/problems/plus-one/) [answer](66.plus-one.js) 
+[66: Plus One 🍀[Easy]](https://leetcode.com/problems/plus-one/) [🙈](66.plus-one.js) 
 
 > 逆序遍历, 如果+1大于9则要进位
 
-[67: Add Binary 🍀[Easy]](https://leetcode.com/problems/add-binary/) [answer](67.add-binary.js) 
+[67: Add Binary 🍀[Easy]](https://leetcode.com/problems/add-binary/) [🙈](67.add-binary.js) 
 
 > 和上题类似, 只不过是二进制
 
 [68: Text Justification 🍉[Hard]]
 
 
-[69: Sqrt(x) 🍀[Easy]](https://leetcode.com/problems/sqrtx/) [answer](69.sqrt-x.js)
+[69: Sqrt(x) 🍀[Easy]](https://leetcode.com/problems/sqrtx/) [🙈](69.sqrt-x.js)
 
 > 也是一个二分查找, 范围是 [0, Math.floor(Math.sqrt(Number.MAX_SAFE_INTEGER))]之间,  退出条件是 high - low <= 1, 所以floor的low + high的中间值为结果
 
-[70: Climbing Stairs 🍀[Easy]](https://leetcode.com/problems/climbing-stairs/) [answer](70.climbing-stairs.js)
+[70: Climbing Stairs 🍀[Easy]](https://leetcode.com/problems/climbing-stairs/) [🙈](70.climbing-stairs.js)
 
 > 很经典的上台阶问题, 网上的讨论已经非常多了, 本质是一个斐波拉契数列的经典实例, 后值等于当前值加前一个值的和"n = (n-1）(n-2)", 由于递归的时候会重复计算, 所以加上缓存可以解决性能问题
 
@@ -290,7 +292,7 @@ D      (D)
 [82: Remove Duplicates from Sorted List II 🎃[Medium]]
 
 
-[83: Remove Duplicates from Sorted List 🍀[Easy]](https://leetcode.com/problems/remove-duplicates-from-sorted-list/) [answer](83.remove-duplicates-from-sorted-list.js)
+[83: Remove Duplicates from Sorted List 🍀[Easy]](https://leetcode.com/problems/remove-duplicates-from-sorted-list/) [🙈](83.remove-duplicates-from-sorted-list.js)
 
 > 遍历list，用当前和下一个对比，如果相同则跳过即可
 
@@ -306,7 +308,7 @@ D      (D)
 [87: Scramble String 🍉[Hard]]
 
 
-[88: Merge Sorted Array 🍀[Easy]](https://leetcode.com/problems/merge-sorted-array/) [answer](88.merge-sorted-array.js)
+[88: Merge Sorted Array 🍀[Easy]](https://leetcode.com/problems/merge-sorted-array/) [🙈](88.merge-sorted-array.js)
 
 > 逆序遍历nums1, 由于后面有占位符长度===nums2，而且连个数组都是排序过的，可以直接两边对比最大值，填充最大的在nums1的index上
 
@@ -343,7 +345,7 @@ D      (D)
 [99: Recover Binary Search Tree 🍉[Hard]]
 
 
-[100: Same Tree 🍀[Easy]](https://leetcode.com/problems/same-tree/) [answer](100.same-tree.js)
+[100: Same Tree 🍀[Easy]](https://leetcode.com/problems/same-tree/) [🙈](100.same-tree.js)
 
 > 递归遍历树，对比左右节点即可
 
