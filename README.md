@@ -1,26 +1,26 @@
-# LeetCode JavaScript 解题思路（1-100）
+# LeetCode JavaScript 解题思路（1-1312）
 
 [1: Two Sum 🍀[Easy]](https://leetcode.com/problems/two-sum/) [🙈](1.two-sum.js)
 
-> O(n)的办法是利用Map缓存, key = target - nums\[index], val = index
+> 利用Map缓存, key = target - nums\[index], val = index
 
 [2: Add Two Numbers 🎃[Medium]](https://leetcode.com/problems/add-two-numbers/) [🙈](2.add-two-numbers.js)
 
-> 类似十进制的运算，从后面往前撸，大于9要进一位，麻烦的是要在链表中计算
+> 类似十进制的运算, 从后面往前撸, 大于9要进一位, 麻烦的是要在链表中计算
 
 [3: Longest Substring Without Repeating Characters 🎃[Medium]](https://leetcode.com/problems/longest-substring-without-repeating-characters/) [🙈](3.longest-substring-without-repeating-characters.js)
 
-> O(n)遍历一个字符串, 如果不重复放到temp里，比较长度
-
+> 遍历一个字符串, 如果不重复放到temp里, 比较长度
 
 [4: Median of Two Sorted Arrays 🍉[Hard]](https://leetcode.com/problems/median-of-two-sorted-arrays/) [🙈](4.median-of-two-sorted-arrays.js)
 
 
-[5: Longest Palindromic Substring 🎃[Medium]]
+[5: Longest Palindromic Substring 🎃[Medium]](https://leetcode.com/problems/longest-palindromic-substring/) ] [🙈](5.longest-palindromic-substring.js)
 
+> 设定left, right两个index, 当s[left] === s[right], 则是回文, 向外侧递增, 当 right - left > s.length - index 循环可以退出
+> 另外pivot有两种情况, 如果s长度是偶数就没有pivot
 
 [6: ZigZag Conversion 🎃[Medium]](https://leetcode.com/problems/zigzag-conversion/) [🙈](6.zig-zag-conversion.js) 
-
 
 ZigZag有如下规律, 当n=3的时候Y坐标为[0,1,2,1], 当n=4的时候Y坐标为[0,1,2,3,2,1], 按照这个规律像俄罗斯方块一样累加再拼接即可
 ```
@@ -30,53 +30,63 @@ C E    (C) (E)
 D      (D)
 ```
 
+[7: Reverse Integer 🍀[Easy]](https://leetcode.com/problems/reverse-integer/) [🙈](7.reverse-integer.js)
 
+> 处理一下正负号的情况再反转就好了
 
+[8: String to Integer (atoi) 🎃[Medium]](https://leetcode.com/problems/string-to-integer-atoi/) [🙈](8.string-to-integer-atoi.js)
 
-[7: Reverse Integer 🍀[Easy]]
+> 用parseInt方法处理, 数字范围在INT_MAX在 [2 ** 32 -1, -(2 ** 32)] 之间
 
+[9: Palindrome Number 🍀[Easy]](https://leetcode.com/problems/palindrome-number/) [🙈](9.palindrome-number.js)
 
-[8: String to Integer (atoi) 🎃[Medium]]
-
-
-[9: Palindrome Number 🍀[Easy]]
-
+> 简易的办法是转成数组后reverse, 如果等于本身就是回文, 另一个办法是遍历从两边(0, length - 1)向内开始遍历, 参考[longest-palindromic-substring](5.longest-palindromic-substring.js)
 
 [10: Regular Expression Matching 🍉[Hard]]
 
 
-[11: Container With Most Water 🎃[Medium]]
+[11: Container With Most Water 🎃[Medium]](https://leetcode.com/problems/container-with-most-water/) [🙈](11.container-with-most-water.js) 
 
+> 类型求最大面积, x坐标=索引距离, y坐标=两根柱子最小值, 从两边向内收缩即可
 
 [12: Integer to Roman 🎃[Medium]]
 
 
-[13: Roman to Integer 🍀[Easy]]
+[13: Roman to Integer 🍀[Easy]](https://leetcode.com/problems/roman-to-integer/) [🙈](13.roman-to-integer.js) 
 
+> 从右到左遍历, 如果一下个目标比当前值大就累加, 否则减去该值
 
-[14: Longest Common Prefix 🍀[Easy]]
+[14: Longest Common Prefix 🍀[Easy]](https://leetcode.com/problems/longest-common-prefix/) [🙈](14.longest-common-prefix.js)  
 
+> 子数组按顺序相互对比就可以了
 
-[15: 3Sum 🎃[Medium]]
+[15: 3Sum 🎃[Medium]](https://leetcode.com/problems/3sum/) [🙈](15.3-sum.js)
 
+> 首先进行排序, 三个游标j = 0; k = j + 1; l = length -1, 其中jl向内走, 如果重叠了进位, 把三个数相加与target对比
 
-[16: 3Sum Closest 🎃[Medium]]
+[16: 3Sum Closest 🎃[Medium]](https://leetcode.com/problems/3sum-closest/) [🙈](16.3-sum-closest.js)
 
+> 核心思想和上题基本一致, 用Math.abs(sum - target)计算距离, 存closest的值
 
-[17: Letter Combinations of a Phone Number 🎃[Medium]]
+[17: Letter Combinations of a Phone Number 🎃[Medium]](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) [🙈](17.letter-combinations-of-a-phone-number.js)
 
+> 先求出数字到字母数组的映射关系, 然后返回多数组的排列组合即可
 
-[18: 4Sum 🎃[Medium]]
+[18: 4Sum 🎃[Medium]](https://leetcode.com/problems/4sum/) [🙈](18.4-sum.js)
+
+> 比[3Sum](https://leetcode.com/problems/3sum/)再多一层遍历
 
 
 [19: Remove Nth Node From End of List 🎃[Medium]]
 
 
-[20: Valid Parentheses 🍀[Easy]]
+[20: Valid Parentheses 🍀[Easy]](https://leetcode.com/problems/valid-parentheses/) [🙈](20.valid-parentheses.js)
 
+> {[()]}是对称性的, 所以两两之后等于5, 声明一个数组, 遍历时如果和为5就pop, 否则push
 
-[21: Merge Two Sorted Lists 🍀[Easy]]
+[21: Merge Two Sorted Lists 🍀[Easy]](https://leetcode.com/problems/merge-two-sorted-lists/) [answer](21.merge-two-sorted-lists.js)
 
+> 先拆开转成两个数组, 再sort后拼装就可以了
 
 [22: Generate Parentheses 🎃[Medium]]
 
@@ -90,17 +100,21 @@ D      (D)
 [25: Reverse Nodes in k-Group 🍉[Hard]]
 
 
-[26: Remove Duplicates from Sorted Array 🍀[Easy]]
+[26: Remove Duplicates from Sorted Array 🍀[Easy]](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)  [answer](26.remove-duplicates-from-sorted-array.js)
 
+> 遍历时用当前值和前一个值对比, 如果不相等, 用当前值替换掉前一个值, ++计数器, 结果等于nums.length - 计数器
 
-[27: Remove Element 🍀[Easy]]
+[27: Remove Element 🍀[Easy]](https://leetcode.com/problems/remove-element/) [answer](27.remove-element.js)
 
+> 类似dom操作removeChild方法, 对数组操作用splice(i, 1)删除即可
 
-[28: Implement strStr 🍀[Easy]]
+[28: Implement strStr 🍀[Easy]](https://leetcode.com/problems/implement-strstr/) [answer](28.implement-str-str.js)
 
+> 返回indexOf
 
-[29: Divide Two Integers 🎃[Medium]]
+[29: Divide Two Integers 🎃[Medium]](https://leetcode.com/problems/divide-two-integers/) [answer](29.divide-two-integers.js)
 
+> 不能用乘除摩来实现除的方法, 所以用二分查找和 >> << 位运算实现
 
 [30: Substring with Concatenation of All Words 🍉[Hard]]
 
@@ -117,8 +131,9 @@ D      (D)
 [34: Find First and Last Position of Element in Sorted Array 🎃[Medium]]
 
 
-[35: Search Insert Position 🍀[Easy]]
+[35: Search Insert Position 🍀[Easy]](https://leetcode.com/problems/search-insert-position/) [answer](35.search-insert-position.js) 
 
+> 用二分查找找到目标, low <= target <= high
 
 [36: Valid Sudoku 🎃[Medium]]
 
@@ -128,8 +143,8 @@ D      (D)
 
 [38: Count and Say 🍀[Easy]](https://leetcode.com/problems/count-and-say/) [🙈](38.count-and-say.js)
 
-> 难点不是题目算法，是题目的理解上，结果找了中文版才醍醐灌顶
-> 其实就是用上一次的结果来计算，其中，第一个是量词/频次，第二个是值
+> 难点不是题目算法, 是题目的理解上, 结果找了中文版才醍醐灌顶
+> 其实就是用上一次的结果来计算, 其中, 第一个是量词/频次, 第二个是值
 > 1 就是1 = 1
 > 2 一个1 = 11
 > 3 两个1 = 21
@@ -179,8 +194,9 @@ D      (D)
 [52: N-Queens II 🍉[Hard]]
 
 
-[53: Maximum Subarray 🍀[Easy]]
+[53: Maximum Subarray 🍀[Easy]](https://leetcode.com/problems/maximum-subarray/) [answer](53.maximum-subarray.js)
 
+> 遍历比较i和i-1的大小, 用最大值替换i, 记录最大的max值
 
 [54: Spiral Matrix 🎃[Medium]]
 
@@ -194,8 +210,9 @@ D      (D)
 [57: Insert Interval 🍉[Hard]]
 
 
-[58: Length of Last Word 🍀[Easy]]
+[58: Length of Last Word 🍀[Easy]](https://leetcode.com/problems/length-of-last-word/) [answer](58.length-of-last-word.js)
 
+> 用正则效率太低, 另一个办法是逆序遍历, 当不为空的时候累加长度, 再遇到空格退出
 
 [59: Spiral Matrix II 🎃[Medium]]
 
@@ -218,20 +235,24 @@ D      (D)
 [65: Valid Number 🍉[Hard]]
 
 
-[66: Plus One 🍀[Easy]]
+[66: Plus One 🍀[Easy]](https://leetcode.com/problems/plus-one/) [answer](66.plus-one.js) 
 
+> 逆序遍历, 如果+1大于9则要进位
 
-[67: Add Binary 🍀[Easy]]
+[67: Add Binary 🍀[Easy]](https://leetcode.com/problems/add-binary/) [answer](67.add-binary.js) 
 
+> 和上题类似, 只不过是二进制
 
 [68: Text Justification 🍉[Hard]]
 
 
-[69: Sqrt(x) 🍀[Easy]]
+[69: Sqrt(x) 🍀[Easy]](https://leetcode.com/problems/sqrtx/) [answer](69.sqrt-x.js)
 
+> 也是一个二分查找, 范围是 [0, Math.floor(Math.sqrt(Number.MAX_SAFE_INTEGER))]之间,  退出条件是 high - low <= 1, 所以floor的low + high的中间值为结果
 
-[70: Climbing Stairs 🍀[Easy]]
+[70: Climbing Stairs 🍀[Easy]](https://leetcode.com/problems/climbing-stairs/) [answer](70.climbing-stairs.js)
 
+> 很经典的上台阶问题, 网上的讨论已经非常多了, 本质是一个斐波拉契数列的经典实例, 后值等于当前值加前一个值的和"n = (n-1）(n-2)", 由于递归的时候会重复计算, 所以加上缓存可以解决性能问题
 
 [71: Simplify Path 🎃[Medium]]
 
@@ -269,8 +290,9 @@ D      (D)
 [82: Remove Duplicates from Sorted List II 🎃[Medium]]
 
 
-[83: Remove Duplicates from Sorted List 🍀[Easy]]
+[83: Remove Duplicates from Sorted List 🍀[Easy]](https://leetcode.com/problems/remove-duplicates-from-sorted-list/) [answer](83.remove-duplicates-from-sorted-list.js)
 
+> 遍历list，用当前和下一个对比，如果相同则跳过即可
 
 [84: Largest Rectangle in Histogram 🍉[Hard]]
 
@@ -284,8 +306,9 @@ D      (D)
 [87: Scramble String 🍉[Hard]]
 
 
-[88: Merge Sorted Array 🍀[Easy]]
+[88: Merge Sorted Array 🍀[Easy]](https://leetcode.com/problems/merge-sorted-array/) [answer](88.merge-sorted-array.js)
 
+> 逆序遍历nums1, 由于后面有占位符长度===nums2，而且连个数组都是排序过的，可以直接两边对比最大值，填充最大的在nums1的index上
 
 [89: Gray Code 🎃[Medium]]
 
@@ -320,9 +343,9 @@ D      (D)
 [99: Recover Binary Search Tree 🍉[Hard]]
 
 
-[100: Same Tree 🍀[Easy]]
+[100: Same Tree 🍀[Easy]](https://leetcode.com/problems/same-tree/) [answer](100.same-tree.js)
 
-
+> 递归遍历树，对比左右节点即可
 
 [101: Symmetric Tree 🍀[Easy]]
 
