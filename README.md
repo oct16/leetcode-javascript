@@ -90,11 +90,11 @@ D      (D)
 
 > 先拆开转成两个数组, 再sort后拼装就可以了
 
-[22: Generate Parentheses 🎃[Medium]]
+[22: Generate Parentheses 🎃[Medium]](https://leetcode.com/problems/generate-parentheses/) [answer](22.generate-parentheses.js)
 
+> 直接的思路是全排序去重，其中左'(' 与 右')' 是固定的，可以减少一部分复杂度，[更简单的方法](22.generate-parentheses.js) 是不断的拼接递归，直到左右计数器剩余为0退出，由于必须是‘)’结尾，需要设条件right > left
 
 [23: Merge k Sorted Lists 🍉[Hard]]
-
 
 [24: Swap Nodes in Pairs 🎃[Medium]]
 
