@@ -44,6 +44,7 @@ D      (D)
 
 [10: Regular Expression Matching 🍉[Hard]]
 
+> 可以用正则最简单，这里用的是递归，需要注意题目给的是非贪婪模式，需要优先匹配x*但是不命中的情况
 
 [11: Container With Most Water 🎃[Medium]](https://leetcode.com/problems/container-with-most-water/) [🙈](11.container-with-most-water.js) 
 
@@ -98,9 +99,9 @@ D      (D)
 
 [24: Swap Nodes in Pairs 🎃[Medium]]
 
+> 递归两两交换
 
 [25: Reverse Nodes in k-Group 🍉[Hard]]
-
 
 [26: Remove Duplicates from Sorted Array 🍀[Easy]](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)  [🙈](26.remove-duplicates-from-sorted-array.js)
 
@@ -350,6 +351,8 @@ D      (D)
 > 递归遍历树，对比左右节点即可
 
 [101: Symmetric Tree 🍀[Easy]]
+
+> 用A，B两个节点left, right两节点交错递归对比，即(A.left, B.right) (B.left, A.right), 当节点没有子节点并且值一样时退出
 
 [102: Binary Tree Level Order Traversal 🎃[Medium]]
 
