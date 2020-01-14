@@ -17,6 +17,7 @@
  * @return {ListNode}
  */
 var mergeKLists = function(lists) {
+    // eslint-disable-next-line no-undef
     const head = new ListNode()
     let HEAP = head
     lists = lists
