@@ -42,7 +42,7 @@ D      (D)
 
 > 简易的办法是转成数组后reverse, 如果等于本身就是回文, 另一个办法是遍历从两边(0, length - 1)向内开始遍历, 参考[longest-palindromic-substring](5.longest-palindromic-substring.js)
 
-[10: Regular Expression Matching 🍉[Hard]]
+[10: Regular Expression Matching 🍉[Hard]](https://leetcode.com/problems/regular-expression-matching/)  [🙈](10.regular-expression-matching.js)
 
 > 可以用正则最简单，这里用的是递归，需要注意题目给的是非贪婪模式，需要优先匹配x*但是不命中的情况
 
@@ -95,13 +95,17 @@ D      (D)
 
 > 直接的思路是全排序去重，其中左'(' 与 右')' 是固定的，可以减少一部分复杂度，[更简单的方法](22.generate-parentheses.js) 是不断的拼接递归，直到左右计数器剩余为0退出，由于必须是‘)’结尾，需要设条件right > left
 
-[23: Merge k Sorted Lists 🍉[Hard]]
+[23: Merge k Sorted Lists 🍉[Hard]](https://leetcode.com/problems/merge-k-sorted-lists/)  [🙈](23.merge-k-sorted-lists.js)
 
-[24: Swap Nodes in Pairs 🎃[Medium]]
+> 排序后取最小的val,再拼装,直到数组遍历结束
 
-> 递归两两交换
+[24: Swap Nodes in Pairs 🎃[Medium]](https://leetcode.com/problems/swap-nodes-in-pairs/) [🙈](24.swap-nodes-in-pairs.js)
 
-[25: Reverse Nodes in k-Group 🍉[Hard]]
+> 设需要交换的两个点为 head 和 next，head 连接后面交换完成的子链表，next 连接 head，完成交换
+
+[25: Reverse Nodes in k-Group 🍉[Hard]](https://leetcode.com/problems/reverse-nodes-in-k-group/) [🙈](25.reverse-nodes-in-k-group.js)
+
+> 题目的意思是把链表切成k段，每段反转，参考[206题](206.reverse-linked-list.js)的链表反转办法, 递归返回即可
 
 [26: Remove Duplicates from Sorted Array 🍀[Easy]](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)  [🙈](26.remove-duplicates-from-sorted-array.js)
 
@@ -562,7 +566,9 @@ D      (D)
 
 [205: Isomorphic Strings 🍀[Easy]]
 
-[206: Reverse Linked List 🍀[Easy]]
+[206: Reverse Linked List 🍀[Easy]](https://leetcode.com/problems/reverse-linked-list/) [🙈](206.reverse-linked-list.js)
+
+> 办法是遍历整个链表, 切断之前next的联系，重新指想prev, 每次循环更新prev和cur的值
 
 [207: Course Schedule 🎃[Medium]]
 
