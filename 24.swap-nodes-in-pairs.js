@@ -21,9 +21,9 @@ var swapPairs = function(head) {
         return head
     }
 
-    const temp = head.next
-    head.next = swapPairs(temp.next)
-    temp.next = head
-    return temp
+    const next = head.next
+    head.next = swapPairs(next.next)
+    next.next = head
+    return next
 }
 // @lc code=end
