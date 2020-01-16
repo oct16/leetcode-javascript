@@ -24,7 +24,5 @@ var rotate = function(matrix) {
             matrix[i][matrix[0].length - j - 1] = temp
         }
     }
-
-    return matrix
 }
 // @lc code=end
