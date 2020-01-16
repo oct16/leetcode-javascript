@@ -126,7 +126,7 @@ D      (D)
 [30: Substring with Concatenation of All Words 🍉[Hard]]
 
 
-[31: Next Permutation 🎃[Medium]]
+[31: Next Permutation 🎃[Medium]](https://leetcode.com/problems/next-permutation/) 
 
 
 [32: Longest Valid Parentheses 🍉[Hard]]
@@ -159,8 +159,9 @@ D      (D)
 > 5 一个1一个2两个1 = 111221  ... 以此类推 ...
 > emm,,, 递归就可以了
 
-[39: Combination Sum 🎃[Medium]]
+[39: Combination Sum 🎃[Medium]](https://leetcode.com/problems/combination-sum/)  [🙈](39.combination-sum.js)
 
+> 可以用递归收的思路解决，细节是每个值是可以复用的，所有递归要从上一次的index开始, 所有数字为正，因此不会陷入死循环中，之后判断当前数字是否小于remain(n)值继续递归
 
 [40: Combination Sum II 🎃[Medium]]
 
