@@ -25,5 +25,3 @@ var groupAnagrams = function(strs) {
     return Object.values(result)
 }
 // @lc code=end
-console.log(groupAnagrams(['eat', 'tea', 'tan', 'ate', 'nat', 'bat']))
-console.log(groupAnagrams(['', '']))
