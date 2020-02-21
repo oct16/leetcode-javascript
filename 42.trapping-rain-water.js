@@ -10,22 +10,23 @@
  * @return {number}
  */
 function trap(height) {
-    if (height == null || height.length === 0) return 0
-
+    const size = height.length
+    if (height == null || size === 0) return 0
+    let LMax = []
+    let RMax = []
     let res = 0
-    for (let i = 0; i < height.length; i++) {
-        let lMax = 0
-        let rMax = 0
+    LMax[0] = height[0]
+    for (let i = 1; i < size; i++) {
+        LMax[i] = Math.max(height[i], LMax[i - 1])
+    }
 
-        for (let j = 0; j < i; j++) {
-            lMax = Math.max(lMax, height[j])
-        }
-        for (let j = i + 1; j < height.length; j++) {
-            rMax = Math.max(rMax, height[j])
-        }
+    RMax[size - 1] = height[size - 1]
+    for (let i = size - 2; i >= 0; i--) {
+        RMax[i] = Math.max(height[i], RMax[i + 1])
+    }
 
-        const water = Math.min(lMax, rMax) - height[i]
-        if (water > 0) res += water
+    for (let i = 0; i < size - 1; i++) {
+        res += Math.min(LMax[i], RMax[i]) - height[i]
     }
 
     return res
