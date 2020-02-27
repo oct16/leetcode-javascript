@@ -14,17 +14,21 @@ var minDistance = function(word1, word2) {
     const m = word1.length
     const n = word2.length
 
-    const dp = Array.from({ length: m }, () => new Array(n).fill(0))
+    if (!m || !n) {
+        return Math.max(m, n)
+    }
 
-    for (let i = 1; i < m; i++) {
+    const dp = Array.from({ length: m + 1 }, () => new Array(n + 1).fill(0))
+
+    for (let i = 0; i <= m; i++) {
         dp[i][0] = i
     }
-    for (let i = 1; i < n; i++) {
+    for (let i = 0; i <= n; i++) {
         dp[0][i] = i
     }
 
-    for (let i = 1; i < m; i++) {
-        for (let j = 1; j < n; j++) {
+    for (let i = 1; i <= m; i++) {
+        for (let j = 1; j <= n; j++) {
             if (word1[i - 1] === word2[j - 1]) {
                 // skip
                 dp[i][j] = dp[i - 1][j - 1]
@@ -41,6 +45,6 @@ var minDistance = function(word1, word2) {
         }
     }
 
-    return dp[m - 1][n - 1]
+    return dp[m][n]
 }
 // @lc code=end
