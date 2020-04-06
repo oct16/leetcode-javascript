@@ -10,15 +10,9 @@
  * @return {number}
  */
 var findDuplicate = function (nums) {
-    const min = Math.min.apply(null, nums)
-    const max = Math.max.apply(null, nums)
-    const result = []
-    for (let i = min; i < max; i++) {
-        if (!nums.includes(i)) {
-            result.push(i)
+    for (let i = 0; i < nums.length; i++) {
+        if (~nums.indexOf(nums[i], i + 1)) {
+            return nums[i]
         }
     }
-
-    return result
-    // @lc code=end
 }
